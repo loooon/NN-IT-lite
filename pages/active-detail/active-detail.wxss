@@ -1,0 +1,229 @@
+page {
+    background: #edeef4;
+}
+
+.nav {
+    white-space: nowrap;
+    z-index: 2;
+    width: 100%;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #E5E5E5;
+}
+
+.nav_item {
+    height: 100rpx;
+    text-align: center;
+    font-size: 32rpx;
+    font-weight: 400;
+    line-height: 100rpx;
+    font-family: PingFangSC-Medium, PingFang SC;
+    color: rgba(0, 0, 0, 1);
+}
+
+.avtive {
+    border-bottom: 6rpx solid #4c5bff;
+    color: #626fff;
+    font-weight: 500;
+}
+
+/* 活动图片 */
+
+.body_img {
+    width: 670rpx;
+    height: 396rpx;
+    background: rgba(9, 9, 35, 1);
+}
+
+.flex_cell {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.flex_cell image {
+    width: 30rpx;
+    height: 30rpx;
+    margin: 0 6rpx 0 42rpx;
+}
+
+.title {
+    /* width: 310rpx; */
+    height: 50rpx;
+    font-size: 36rpx;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+    line-height: 50rpx;
+    margin: 64rpx 0 35rpx 38rpx;
+}
+
+.time {
+    /* width: 342rpx; */
+    height: 40rpx;
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(119, 119, 119, 1);
+    line-height: 40rpx;
+}
+
+.local {
+    /* width: 442rpx; */
+    height: 40rpx;
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(119, 119, 119, 1);
+    line-height: 40rpx;
+}
+
+/* 图片定位 */
+
+.detail_img {
+    width: 672rpx;
+    height: 396rpx;
+    margin: 0 40rpx;
+    position: absolute;
+    top: 40rpx;
+}
+
+/* button样式 */
+
+.share button::after {
+    line-height: none;
+}
+
+.share button {
+    margin-right: 0rpx;
+    margin-bottom: -46rpx;
+    padding: 0;
+    background: none;
+}
+
+.share {
+    /* margin-top: 20rpx; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e51c23;
+    font-size: 32rpx;
+}
+
+.share image {
+    margin-right: 42rpx;
+    height: 56rpx;
+    width: 56rpx;
+}
+
+/* 是否已报名 */
+
+.btn_boaming {
+    position: absolute;
+    top: 40rpx;
+    left: 558rpx;
+    right: 32rpx;
+    bottom: 308rpx;
+    width: 128rpx;
+    height: 48rpx;
+    background: rgba(76, 91, 255, 1);
+    border-radius: 200rpx 0px 0px 200rpx;
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    color: rgba(255, 255, 255, 1);
+    line-height: 48rpx;
+    text-align: center;
+}
+.btn_boaming_off {
+    background:rgba(229,229,229,1);
+    color:#999999;
+    position: absolute;
+    top: 40rpx;
+    left: 558rpx;
+    right: 32rpx;
+    bottom: 308rpx;
+    width: 128rpx;
+    height: 48rpx;
+    /* background: rgba(76, 91, 255, 1); */
+    border-radius: 200rpx 0px 0px 200rpx;
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    /* color: rgba(255, 255, 255, 1); */
+    line-height: 48rpx;
+    text-align: center;
+}
+/* 底部按钮 */
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    width: 750rpx;
+    height: 120rpx;
+    border-top: 1rpx solid #ebedf0;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2rpx 0px 0px rgba(229, 229, 229, 1);
+    padding: 0 40rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* .sqrt1 {
+   height: 2000rpx;  
+} */
+
+/* hover-class */
+
+.color {
+    background: #4c5bff;
+    opacity: 0.9;
+}
+
+.topnavFixed {
+    position: fixed;
+    width: 100%;
+    height: 100rpx;
+    top: 0rpx;
+    background: white;
+    z-index: 1;
+}
+
+.topnavAbsolute {
+    width: 100%;
+    height: 100rpx;
+    background: white;
+    /* z-index: 1; */
+}
+.pad0{
+    padding:10rpx 0 30rpx 0;
+
+}
+.y{
+    /* height: 1600rpx; */
+    padding:0 30rpx 0 30rpx; 
+}
+
+.img_flex{
+ 
+    display: flex;
+    justify-content: space-between;
+}
+
+.liuyan {
+  display: flex;
+}
+.liuyan image {
+  margin-right: 30rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  display: inline-block;
+}
+.underline{
+    background: #777777;
+    height: 1px ;
+    width: 560rpx;
+}

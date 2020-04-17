@@ -1,0 +1,4 @@
+<view style="width: 100vw;height: 100vh;"class="img_fix">
+    <image src="../../assets/enter/pic_bg@3x.png" style="width: 100%;height: 100%;" />
+    <image src="../../assets/enter/pic_logo@3x.png" class='img-font' />
+</view>

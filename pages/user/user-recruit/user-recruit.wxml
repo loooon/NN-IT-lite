@@ -1,0 +1,120 @@
+<van-tabs active="{{ active }}" bind:change="onChange" color="#4C5BFF" sticky animated swipeable>
+    <van-tab title="全部">
+        <view class="component" wx:for="{{recruitment_on}}" wx:key="{{item.id}}" bindtap="recruit_detail" data-id="{{item.id}}">
+            <view>
+                <view class="body_head">
+                    <view>{{item.title}}</view>
+                    <view style="color:#4C5BFF">{{item.compensation}}</view>
+                </view>
+                <view class="body_body">{{item.company}}</view>
+                <view class="body_fooder">
+                    <text>{{item.city}} </text>|
+                    <text>{{item.work_years}} </text>|
+                    <text>{{item.education}}</text>
+                </view>
+            </view>
+            <view class="underline"></view>
+            <view class="component_fooder">
+                <view style="color:#F95656;font-size:32rpx;">已发布</view>
+                <view>
+                    <van-button plain round color="#F95656" catchtap="del_recruit" data-id="{{item.id}}" custom-style="margin-right:20rpx;" custom-class="btn_class">删除</van-button>
+                    <van-button type="info" round color="#4C5BFF" catchtap="modify" data-id="{{item.id}}" custom-class="btn_class">修改</van-button>
+                </view>
+            </view>
+        </view>
+
+        <view class="component" wx:for="{{recruitment_off}}" wx:key="{{item.id}}">
+            <view>
+                <view class="body_head">
+                    <view>{{item.title}}</view>
+                    <view style="color:#4C5BFF">{{item.compensation}}</view>
+                </view>
+                <view class="body_body">{{item.company}}</view>
+                <view class="body_fooder">
+                    <text>{{item.city}} </text>|
+                    <text>{{item.work_years}} </text>|
+                    <text>{{item.education}}</text>
+                </view>
+            </view>
+            <view class="underline"></view>
+            <view class="component_fooder">
+                <view style="color:#F95656;font-size:32rpx;">审核中</view>
+                <view>
+                    <van-button plain round color="#F95656" bindtap="del_recruit" data-id="{{item.id}}" custom-class="btn_class">删除</van-button>
+                </view>
+            </view>
+        </view>
+    </van-tab>
+    <van-tab title="已发布">
+        <view class="component" wx:for="{{recruitment_on}}" wx:key="{{item.id}}" bindtap="recruit_detail" data-id="{{item.id}}">
+            <view>
+                <view class="body_head">
+                    <view>{{item.title}}</view>
+                    <view style="color:#4C5BFF">{{item.compensation}}</view>
+                </view>
+                <view class="body_body">{{item.company}}</view>
+                <view class="body_fooder">
+                    <text>{{item.city}} </text>|
+                    <text>{{item.work_years}} </text>|
+                    <text>{{item.education}}</text>
+                </view>
+            </view>
+            <view class="underline"></view>
+            <view class="component_fooder">
+                <view style="color:#F95656;font-size:32rpx;">已发布</view>
+                <view>
+                    <van-button plain round color="#F95656" catchtap="del_recruit" data-id="{{item.id}}" custom-style="margin-right:20rpx;" custom-class="btn_class">删除</van-button>
+
+                    <van-button type="info" round color="#4C5BFF" catchtap="modify" custom-class="btn_class" data-id="{{item.id}}">修改</van-button>
+
+                </view>
+            </view>
+        </view>
+    </van-tab>
+    <van-tab title="待审核">
+        <view class="component" wx:for="{{recruitment_off}}" wx:key="{{item.id}}">
+            <view>
+                <view class="body_head">
+                    <view>{{item.title}}</view>
+                    <view style="color:#4C5BFF">{{item.compensation}}</view>
+                </view>
+                <view class="body_body">{{item.company}}</view>
+                <view class="body_fooder">
+                    <text>{{item.city}} </text>|
+                    <text>{{item.work_years}} </text>|
+                    <text>{{item.education}}</text>
+                </view>
+            </view>
+            <view class="underline"></view>
+            <view class="component_fooder">
+                <view style="color:#F95656;font-size:32rpx;">审核中</view>
+                <view>
+                    <van-button plain round color="#F95656" bindtap="del_recruit" data-id="{{item.id}}" custom-class="btn_class">删除</van-button>
+                </view>
+            </view>
+        </view>
+    </van-tab>
+</van-tabs>
+
+
+<!-- <view class="component">
+    <view>
+        <view class="component_title">NNITQ Meetup #9</view>
+        <view class="component_flex">
+            <image src="../../../assets/index/ic_time@3x.png"></image>
+            <view class="time">11月30日 周六 13:00-17:30</view>
+        </view>
+        <view class="component_flex" style="margin-top: 16rpx;margin-bottom:38rpx;">
+            <image src="../../../assets/index/ic_location@3x.png" style="width:28rpx;height:34rpx;margin-right:14rpx;"></image>
+            <view class="local">五象总部大厦C座一层漫享家咖啡厅</view>
+        </view>
+    </view>
+    <view class="underline"></view>
+    <view class="component_fooder">
+        <view style="color:#F95656;font-size:32rpx;">已发布</view>
+        <view>
+            <van-button plain round color="#F95656" bindtap="resume"  custom-style="margin-right:20rpx;"custom-class="btn_class">删除</van-button>
+            <van-button type="info" round color="#4C5BFF" bindtap="resume" custom-class="btn_class" >修改</van-button>
+        </view>
+    </view>
+</view> -->

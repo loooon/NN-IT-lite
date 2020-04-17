@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "loading": "/components/static/loading/loading"
+    },
+    "navigationBarTitleText": "招聘职位",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+}

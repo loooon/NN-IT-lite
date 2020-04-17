@@ -1,0 +1,30 @@
+<scroll-view scroll-y class="container">
+ <view style="display:flex;flex-direction: column;align-items: center;padding-top:300rpx;" wx:if="{{kong}}">
+        <image src="../../../assets/null.png" style="width:160rpx;height:160rpx;"></image>
+        <text style="margin:30rpx 0;">还没有信息通知喔，去首页逛逛吧</text>
+        <van-button color="	#B9B9FF" round bindtap="return_index">去首页</van-button>
+
+    </view>
+    <!--pages/user/user-message/user-message.wxml-->
+    <view wx:for="{{meg_list}}" wx:key="{{itme.id}}" style="margin-bottom: 20rpx;"> 
+        <van-divider contentPosition="center" custom-style="margin:0;background: #fff;padding-top: 20rpx ;">{{item.time}}</van-divider>
+        <van-panel use-footer-slot>
+            <view slot="footer">
+                <text>{{item.message}}</text>
+                <view style="display:flex; justify-content: space-around; margin: 16rpx 0">
+                    <navigator url="../user-payment/user-payment">
+                        <van-button custom-style="display:flex" plain type="primary" size="small" round>去支付</van-button>
+                    </navigator>
+                </view>
+            </view>
+        </van-panel>
+    </view>
+    <!-- <van-panel use-footer-slot>
+  <view slot="footer">
+    <text>您联系的HR回复消息啦！快去聊一聊吧！</text>
+    <view style="display:flex; justify-content: space-around; margin: 16rpx 0">
+      <van-button custom-style="display:flex" plain type="primary" size="small" round>去聊聊</van-button>
+    </view>
+  </view>
+</van-panel> -->
+</scroll-view>

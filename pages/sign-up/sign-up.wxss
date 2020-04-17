@@ -1,0 +1,126 @@
+/* .return_index {
+  width: 500rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 82rpx;
+  background-color: rgba(181, 181, 181, 1);
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Arial;
+}
+
+.col {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bao_text {
+  margin: 26rpx 100rpx 86rpx 100rpx;
+  width: 550rpx;
+  height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.bao_define{
+ margin: 100rpx;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+} 
+.weui-input{
+  border: 1px solid #BBBBBB;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  width: 690rpx;
+  height: 80rpx;
+}
+.bao_input{
+ 
+  font-size: 32rpx;
+  margin: 30rpx;
+} */
+
+page {
+    /* margin: 40rpx; */
+    background: rgba(241, 242, 244, 1);
+}
+
+.title {
+    font-size: 42rpx;
+    font-weight: 600;
+    margin-bottom: 40rpx;
+}
+
+.boby {
+    width: 670rpx;
+    height: 500rpx;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 16rpx;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.body_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 610rpx;
+    height: 108rpx;
+    box-shadow: 0px 1px 0px 0px rgba(218, 218, 218, 1);
+}
+
+.boby input {
+    width: 224rpx;
+    height: 36rpx;
+}
+
+/* .bottom {
+    margin: 40rpx 0;
+    text-align: center;
+    line-height: 88rpx;
+    color: #fff;
+    font-size: 34rpx;
+    width: 670rpx;
+    font-weight: 500;
+    height: 88rpx;
+    background: rgba(76, 91, 255, 1);
+    border-radius: 50rpx;
+} */
+
+button:not([size='mini']) {
+    margin: 40rpx 0;
+    min-height: 88rpx;
+    width: 670rpx;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    color: #fff;
+    font-size: 34rpx;
+}
+
+.sign_up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    height: 100vh;
+}
+
+.sign_up_img {
+    width: 204rpx;
+    height: 204rpx;
+    margin: 200rpx 0 80rpx 0;
+}
+
+.sign_up button:not([size='mini']) {
+    min-height: 88rpx;
+    width: 314rpx;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    color: #4c5bff;
+    font-size: 34rpx;
+}

@@ -1,0 +1,147 @@
+<!-- 主体 -->
+<view>
+    <view class="active_deail">
+        <view style="background: #fff;width:750rpx;height:412rpx;">
+            <!-- <image src="../../assets/activety_detail/bottom_detail@3x.png" style="width:750rpx;height:412rpx;"></image> -->
+        </view>
+        <view class="detail_img">
+
+            <view style="position:relative">
+                <image src="../../assets/activety_detail/pic_poster@3x.png" style="width:672rpx;height:396rpx;"></image>
+                <view wx:if="{{disabled}}" class="btn_boaming">{{text}}</view>
+                <view class="btn_boaming_off" wx:else>{{text}}</view>
+            </view>
+        </view>
+        <!-- <image src="../../assets/activety_detail/pic_poster@3x.png" class="detail_img"></image> -->
+        <view style=" background: #fff;">
+            <view class="share">
+                <view class="title">{{activity_detail.title}}</view>
+                <view>
+                    <button open-type="share" size="mini" hover-class="none">
+                        <image src="../../assets/activety_detail/ic_share@3x.png" hover-class="color"></image>
+                    </button>
+                </view>
+            </view>
+            <view class="flex_cell">
+                <image src="../../assets/index/ic_time@3x.png" style="margin-right:14rpx;"></image>
+                <view class="time">{{activity_detail.start_date}} {{activity_detail.start_week}} {{activity_detail.start_times}}-{{activity_detail.end_times}}</view>
+            </view>
+            <view class="flex_cell" style="margin-top: 16rpx;">
+                <image src="../../assets/index/ic_location@3x.png" style="width:28rpx;height:32rpx;margin-right:16rpx;"></image>
+                <view class="local">{{activity_detail.address}}</view>
+            </view>
+            <view class="flex_cell" style="padding: 16rpx 0 40rpx 0;">
+                <image src="../../assets/activety_detail/ic_baoming@3x.png" style="width:36rpx;height:28rpx;margin-right:8rpx;"></image>
+                <view class="local">报名情况 {{activity_detail.orders.length}}/{{activity_detail.population}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="tab" style=" background: #fff;margin-top:16rpx;">
+        <!-- 头部导航 -->
+        <view class="nav {{scrollTop>=scrollTop_tab ? 'topnavFixed' : 'topnavAbsolute'}}">
+            <view bindtap="activeNav" data-index="{{item.id}}" class="nav_item {{item.id==currentIndenNav ?'avtive':' '}}" wx:for="{{navList}}" wx:key="{{item.id}}">
+                {{item.text}}
+            </view>
+        </view>
+        <!-- 渲染内容 -->
+        <view wx:if="{{disabled}}" style="margin-top:{{mar_top}}px;height:{{mar_top}}px;background:#fff;">
+            <view class="y" id='w{{0}}' style="background:#fff;height:3000rpx;">
+                <view class=" pad{{0}}">
+                    <rich-text nodes="{{activity_detail._detail}}"></rich-text>
+                </view>
+            </view>
+            <view class="y" id='w{{1}}' style="background:#fff;height:1500rpx;">
+                <view >活动小结（敬请期待）
+                    <rich-text nodes="{{activity_detail.summary}}"></rich-text>
+                </view>
+            </view>
+            <view class="y" id='w{{2}}' style="background:#fff;height:1500rpx;">
+               <view > 活动相册（敬请期待）</view>
+            </view>
+            <view class="y" id='w{{3}}' style="background:#fff;height:1500rpx;">
+                <view >留言建议（敬请期待）</view>
+            </view>
+        </view>
+        <!-- 渲染内容 -->
+        <view wx:else style="margin-top:{{mar_top}}px;height:{{mar_top}}px;background:#fff;">
+            <view class="y" id='w{{0}}' style="background:#fff;">
+                <view class=" pad{{0}}">活动详情
+                    <rich-text nodes="{{activity_detail._detail}}"></rich-text>
+                </view>
+            </view>
+            <view class="y" id='w{{1}}' style="background:#fff;">
+                <view>活动小结
+                    <rich-text nodes="{{activity_detail.summary}}"></rich-text>
+                </view>
+            </view>
+            <view class="y" id='w{{2}}' style="background:#fff;">
+
+                <!-- <rich-text nodes="{{activity_detail.photo}}"></rich-text> -->
+                <view class="img_flex" style=" margin: 0 0 40rpx 0;">
+                    <image src="../../assets/index/pic_banner@3x.png" style="width:320rpx;height:280rpx;"></image>
+                    <image src="../../assets/index/pic_banner@3x.png" style="width:320rpx;height:280rpx;"></image>
+                </view>
+                <view class="img_flex" style="padding-bottom: 30rpx;">
+                    <image src="../../assets/index/pic_banner@3x.png" style="width:320rpx;height:280rpx;"></image>
+                    <image src="../../assets/index/pic_banner@3x.png" style="width:320rpx;height:280rpx;"></image>
+                </view>
+            </view>
+            <view class="y" id='w{{3}}' style="background:#fff;padding:30rpx 0 0 0">
+                <view style="display:flex;margin-bottom: 30rpx;">
+                    <image src="../../assets/index/pic_banner@3x.png" style="width:80rpx;height:80rpx;border-radius: 50%;margin: 0 30rpx;"></image>
+                    <view style="width:560rpx;">
+                        <view>姓名</view>
+                        <view style="margin: 30rpx 0 40rpx 0;">ZHESHI 料理机熟练度空间覅记录时间段会计分录老师看的见覅接二连三建档立卡副经理尽量少开单价分离两</view>
+                        <view class="underline"></view>
+                    </view>
+
+                </view>
+                <view style="display:flex;margin-bottom: 30rpx;">
+                    <image src="../../assets/index/pic_banner@3x.png" style="width:80rpx;height:80rpx;border-radius: 50%;margin: 0 30rpx;"></image>
+                    <view style="width:560rpx;">
+                        <view>姓名</view>
+                        <view style="margin: 30rpx 0 40rpx 0;">ZHESHI 料理机熟练度空间覅记录时间段会计分录老师看的见覅接二连三建档立卡副经理尽量少开单价分离两</view>
+                        <view class="underline"></view>
+                    </view>
+
+                </view>
+                <view style="display:flex;">
+                    <image src="../../assets/index/pic_banner@3x.png" style="width:80rpx;height:80rpx;border-radius: 50%;margin: 0 30rpx;"></image>
+                    <view style="width:560rpx;">
+                        <view>姓名</view>
+                        <view style="margin: 30rpx 0 40rpx 0;">ZHESHI 料理机熟练度空间覅记录时间段会计分录老师看的见覅接二连三建档立卡副经理尽量少开单价分离两</view>
+                        <view class="underline"></view>
+                    </view>
+
+                </view>
+                  <view style="display:flex;">
+                    <image src="../../assets/index/pic_banner@3x.png" style="width:80rpx;height:80rpx;border-radius: 50%;margin: 0 30rpx;"></image>
+                    <view style="width:560rpx;">
+                        <view>姓名</view>
+                        <view style="margin: 30rpx 0 40rpx 0;">ZHESHI 料理机熟练度空间覅记录时间段会计分录老师看的见覅接二连三建档立卡副经理尽量少开单价分离两</view>
+                        <view class="underline"></view>
+                    </view>
+
+                </view>
+                  <view style="display:flex;">
+                    <image src="../../assets/index/pic_banner@3x.png" style="width:80rpx;height:80rpx;border-radius: 50%;margin: 0 30rpx;"></image>
+                    <view style="width:560rpx;">
+                        <view>姓名</view>
+                        <view style="margin: 30rpx 0 40rpx 0;">ZHESHI 料理机熟练度空间覅记录时间段会计分录老师看的见覅接二连三建档立卡副经理尽量少开单价分离两</view>
+                        <view class="underline"></view>
+                    </view>
+                </view>
+                <view style=" background: #fff;height: 120rpx;"></view>
+            </view>
+        </view>
+    </view>
+    <!-- 底部部分 -->
+    <view class="bottom" wx:if="{{disabled}}" style="padding-bottom: {{isIphoneX ? '40rpx' : '0rpx'}};height:{{isIphoneX ? '160rpx' : '120rpx'}}">
+        <view>￥{{activity_detail.price}}</view>
+        <van-button type="info" round color="#4C5BFF" bindtap="{{baoming}}">立即报名</van-button>
+    </view>
+    <view class="bottom" wx:else style="padding-bottom: {{isIphoneX ? '40rpx' : '0rpx'}};height:{{isIphoneX ? '160rpx' : '120rpx'}}">
+        <view>￥{{activity_detail.price}}</view>
+        <van-button type="info" round color="#4C5BFF" disabled>立即报名</van-button>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "loading": "/components/static/loading/loading"
+    },
+    "navigationStyle": "default"
+}

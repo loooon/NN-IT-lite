@@ -1,0 +1,17 @@
+/* pages/enter/enter.wxss */
+.img-font {
+    width: 434rpx;
+    height: 196rpx;
+    position: absolute;
+    top: 200rpx;
+    left: 90rpx;
+    right: 226rpx;
+    bottom: 938rpx;
+}
+.img_fix {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

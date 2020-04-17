@@ -1,0 +1,56 @@
+<scroll-view scroll-y class="container">
+    <!-- banner -->
+    <view>
+        <image src="../../assets/index/pic_banner@3x.png" style="width:670rpx;height:300rpx; margin: 40rpx 40rpx 0 40rpx;position: absolute;">
+        </image>
+        <image src="../../assets/index/pic_shadow@3x.png" style="width:750rpx;height:380rpx;margin-top: 40rpx;"></image>
+    </view>
+    <!-- 活动信息 -->
+    <view style="position:relative">
+        <view class="newActive">最新活动</view>
+        <image class="position_img" src="../../assets/index/pic_newacti@3x.png" style="width:444rpx;height:112rpx;"></image>
+        <view class="active auth" wx:for="{{activity_list}}" wx:key>
+            <view style="position: relative;">
+                <image src="../../assets/activety_detail/pic_poster@3x.png" style="width: 670rpx;height: 396rpx;"> </image>
+                <view class="btn_boaming">正在报名</view>
+            </view>
+            <view class="title">{{item.title}}</view>
+            <view class="flex_cell">
+                <image src="../../assets/index/ic_time@3x.png"></image>
+                <view class="time">{{item.start_date}} {{item.start_week}} {{item.start_times}}-{{item.end_times}}</view>
+            </view>
+            <view class="flex_cell" style="margin-top: 16rpx;margin-bottom:38rpx;">
+                <image src="../../assets/index/ic_location@3x.png" style="width:28rpx;height:34rpx;margin-right:14rpx;"></image>
+                <view class="local">{{item.address}}</view>
+            </view>
+            <van-button class="btn" type="info" open-type="getUserInfo" bind:getuserinfo="onAuth2" data-url="/pages/active-detail/active-detail?id={{item.id}}&status=baoming" hover-class="hover_btn"></van-button>
+        </view>
+
+
+        <!-- 活动信息 -->
+        <view class="active auth" wx:for="{{activity_end}}" wx:key>
+            <view style="position: relative;">
+                <image src="../../assets/activety_detail/pic_poster@3x.png" style="width: 670rpx;height: 396rpx;"> </image>
+                <view class="btn_boaming" style="background:rgba(229,229,229,1);color:#999999;">已结束</view>
+            </view>
+            <view class="title">{{item.title}}</view>
+            <view class="flex_cell">
+                <image src="../../assets/index/ic_time@3x.png"></image>
+                <view class="time">{{item.start_date}} {{item.start_week}} {{item.start_times}}-{{item.end_times}}</view>
+            </view>
+            <view class="flex_cell" style="margin-top: 16rpx;margin-bottom:38rpx;">
+                <image src="../../assets/index/ic_location@3x.png" style="width:28rpx;height:34rpx;margin-right:14rpx;"></image>
+                <view class="local">{{item.address}}</view>
+            </view>
+            <van-button class="btn" type="info" open-type="getUserInfo" bind:getuserinfo="onAuth2" data-url="/pages/active-detail/active-detail?id={{item.id}}&status=ture" hover-class="hover_btn"></van-button>
+        </view>
+    </view>
+</scroll-view>
+<view class="container" i-class="item" wx:if="{{spinShow}}">
+    <i-spin fix custom>
+        <!-- <i-icon type="refresh" size="20" i-class="icon-load" />
+        <view>Loading</view> -->
+        <loading></loading>
+    </i-spin>
+</view>
+<mp-tabbar style="padding-bottom: {{isIphoneX ? '40rpx' : '0rpx'}};"></mp-tabbar>

@@ -1,0 +1,63 @@
+page {
+    background: rgba(241, 242, 244, 1);
+}
+
+.header_bottom {
+    font-size: 32rpx;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 750rpx;
+    height: 128rpx;
+    background: rgba(76, 91, 255, 1);
+    position: fixed;
+    z-index: 102;
+}
+
+.header_txt {
+    margin: 0 14rpx 0 40rpx;
+    width: 200rpx;
+    height: 44rpx;
+    text-align: center;
+    line-height: 44rpx;
+}
+
+.header_btn {
+    width: 176rpx;
+    height: 64rpx;
+    border-radius: 32rpx;
+    text-align: center;
+    line-height: 64rpx;
+    border: 3rpx solid rgba(255, 255, 255, 1);
+    margin-right: 128rpx;
+}
+
+.body {
+    margin: 40rpx;
+    padding: 30rpx;
+    width: 670rpx;
+    height: 220rpx;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 20rpx;
+    box-sizing: border-box;
+}
+
+.body_head {
+    font-weight: 500;
+    font-size: 36rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body_body {
+    margin: 20rpx 0 10rpx 0;
+    font-size: 28rpx;
+}
+
+.body_fooder {
+    font-size: 28rpx;
+    color: rgba(153, 153, 153, 1);
+}
+.hover_class{
+   background: rgba(250, 250, 250, 1);
+}

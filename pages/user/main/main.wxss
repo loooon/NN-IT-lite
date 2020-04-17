@@ -1,0 +1,73 @@
+.userInfo {
+    margin-top: 30rpx;
+    padding: 0 40rpx;
+    font-size: 32rpx;
+}
+
+.userInfo image {
+    border-radius: 50%;
+}
+
+/* 头像外框 */
+
+.sqrt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+    width: 248rpx;
+    height: 248rpx;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* --- cell --- */
+
+.cell-title {
+    font-size: 32rpx;
+}
+
+.cell-value {
+    font-size: 32rpx;
+    color: #4c5bff !important;
+}
+
+.underline {
+    /* margin: 0 40rpx; */
+    width: 670rpx;
+    height: 2rpx;
+    background: #e5e5e5;
+}
+
+/* 授权弹框 */
+
+.tankuang {
+    padding-top: 130rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tankuang .txt {
+    color: #7b7b7b;
+    font-weight: 700;
+    font-size: 30rpx;
+    margin-bottom: 60rpx;
+}
+
+/* 图片定位*/
+
+.mine_img {
+    width: 100%;
+    position: absolute;
+    top: 246rpx;
+    left: 40rpx;
+    right: 466rpx;
+    bottom: 10rpx;
+}
+
+.van-cell {
+    padding: 20px 0 !important;
+    padding: var(--cell-vertical-padding, 20px) var(--cell-horizontal-padding, 0) !important;
+}

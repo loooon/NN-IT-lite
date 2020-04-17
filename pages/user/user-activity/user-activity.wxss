@@ -1,0 +1,117 @@
+/* pages/user/user-activity/user-activity.wxss */
+
+.card {
+    margin: 0 auto;
+    width: 690rpx;
+    border: 2rpx solid rgba(187, 187, 187, 1);
+    box-sizing: border-box;
+}
+
+.card > .row:nth-child(1) {
+    border-bottom: 2rpx solid rgba(187, 187, 187, 1);
+}
+
+.infomation, .code {
+    padding: 16rpx;
+}
+
+/* 图片 */
+
+.infomation image {
+    width: 288rpx;
+    height: 196rpx;
+    margin-right: 16rpx;
+}
+
+.content {
+    justify-content: space-between;
+}
+
+.content .name {
+    font-size: 28rpx;
+    font-weight: 500;
+}
+
+.content .price {
+    color: rgba(229, 28, 35, 1);
+    font-size: 28rpx;
+    font-weight: 500;
+}
+
+.content .publisher {
+    font-size: 24rpx;
+}
+
+.content .date {
+    font-size: 24rpx;
+}
+
+.code {
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+}
+
+page {
+    font-size: 28rpx;
+    background: #f0f0f0;
+}
+
+.component {
+    margin: 30rpx 40rpx 0 40rpx;
+    box-sizing: border-box;
+    padding: 30rpx 30rpx 0rpx 30rpx;
+    width: 670rpx;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 20rpx;
+}
+
+.component_title {
+    font-weight: 600;
+    font-size: 42rpx;
+    margin-bottom: 20rpx;
+}
+
+.component_flex {
+    display: flex;
+    align-items: center;
+    color: #777;
+}
+
+.component_flex image {
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 14rpx;
+}
+
+.underline {
+    height: 4rpx;
+    background: #f1f2f4;
+}
+
+.component_fooder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 116rpx;
+}
+
+.component button:not([size='mini']) {
+    min-height: 72rpx;
+    width: 180rpx;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header_off {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: #fff;
+    justify-content: center;
+}
+.btn_class{
+    width:168rpx !important;
+    height:72rpx !important;
+}

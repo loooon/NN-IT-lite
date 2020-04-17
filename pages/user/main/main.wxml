@@ -1,0 +1,59 @@
+<scroll-view scroll-y class="container">
+    <view class="mine_img">
+        <view style="display: flex;align-items: center;">
+            <view class="sqrt">
+                <image src="{{userInfo.avatarUrl}}" style="width:224rpx;height:224rpx;border-radius: 50%;background:rgba(255,255,255,0.5);"></image>
+            </view>
+
+            <view style="margin-left:30rpx;color:#fff;font-size：40rpx;font-weight:550">{{userInfo.nickName}}</view>
+        </view>
+    </view>
+    <image src="../../../assets/mine/bg_mine@3x.png" style="width:100%;height:480rpx;"></image>
+
+    <view class="userInfo">
+        <van-cell is-link title-class="cell-title" value-class="cell-value" border="{{ false }}" title="全部" value="{{(activity_num + payment_num + audit_num)}}" link-type="navigateTo" url="/pages/user/user-total-activity/user-total-activity" />
+        <view class="underline"></view>
+        <van-cell is-link title-class="cell-title" value-class="cell-value" border="{{ false }}" title="待参加" value="{{activity_num}}" link-type="navigateTo" url="/pages/user/user-activity/user-activity" />
+        <view class="underline"></view>
+        <van-cell is-link title-class="cell-title" value-class="cell-value" border="{{ false }}" title="待支付" value="{{payment_num}}" link-type="navigateTo" url="/pages/user/user-payment/user-payment" />
+        <view class="underline"></view>
+        <van-cell title-class="cell-title" value-class="cell-value" is-link border="{{ false }}" title="待审核" value="{{(audit_num + recruitment_off)}}" link-type="navigateTo" url="/pages/user/user-audit/user-audit" />
+        <view class="underline"></view>
+        <van-cell title-class="cell-title" value-class="cell-value" is-link border="{{ false }}" title="我发布的招聘" value="{{recruitment_mun}}" link-type="navigateTo" url="/pages/user/user-recruit/user-recruit" />
+    </view>
+
+    <!-- <view style="background:rgba(237,238,244,1);height:16rpx;width750rpx;">
+</view> -->
+
+    <!-- <view class="underline"></view> -->
+    <view class="container" wx:if="{{spinShow}}">
+        <i-spin fix custom>
+            <loading></loading>
+        </i-spin>
+    </view>
+    <!-- 未授权弹框 -->
+    <van-popup show="{{ show }}" closeable position="bottom" custom-style="height: 25%" bind:close="onClose">
+        <view class="tankuang">
+            <view class="txt">登录南宁IT圈</view>
+            <van-button round type="info" open-type="getUserInfo" bind:getuserinfo="onAuth2" color="#4C5BFF">一键授权</van-button>
+        </view>
+    </van-popup>
+    <!-- <view style="height:{{mar_top}}px;background:#fff;">
+        <view>
+            <view class="sqrt1 pad{{idx}}">{{item.text}}</view>
+            <rich-text nodes="{{activity_detail._detail}}" class="y" id='w{{0}}' style="background:#fff; padding-top:10rpx;"></rich-text>
+        </view>
+        <view>
+            <view class="sqrt1 pad{{idx}}">{{item.text}}</view>
+            <rich-text nodes="{{activity_detail.summary}}" class="y" id='w{{1}}' style="background:#fff;"></rich-text>
+        </view>
+        <view>
+            <view class="sqrt1 pad{{idx}}">{{item.text}}</view>
+            <rich-text nodes="{{activity_detail.photo}}" class="y" id='w{{2}}' style="background:#fff;"></rich-text>
+        </view>
+        <view>
+            <view class="sqrt1 pad{{idx}}">{{item.text}}</view>
+            <rich-text nodes="{{activity_detail._detail}}" class="y" id='w{{3}}' style="background:#fff;"></rich-text>
+        </view>
+    </view> -->
+</scroll-view>

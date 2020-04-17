@@ -1,0 +1,51 @@
+<scroll-view scroll-y class="container">
+    <view class="header">
+        <view class="header_head">
+            <view>{{recruitment_list.title}}</view>
+            <view style="color:#4C5BFF;font-size:36rpx;font-weight:500;">{{recruitment_list.compensation}}</view>
+        </view>
+        <view class="header_header">{{recruitment_list.company}}</view>
+        <view class="header_fooder">
+            <text>{{recruitment_list.city}} </text>|
+            <text>{{recruitment_list.work_years}} </text>|
+            <text>{{recruitment_list.education}}</text>
+        </view>
+    </view>
+    <view class="body">
+        <view class="body_head">
+            <view>职责描述</view>
+            <view style="font-size:28rpx;">
+                <!-- <textarea maxlength="1500" value="{{recruitment_list.contents}}" auto-height style="width:670rpx;" disabled></textarea> -->
+                <!-- <view style="margin-top:40rpx;">职业描述</view>
+                <rich-text> 1、对移动端产品有深度的理解，负责产品的功能策划、产品设计及项目跟进； 2、完成产品相关文档的输出工作，包括PRD、原型图等，并与UI、开发、测试等人员紧密合作，完成产品版本迭代； 3、推动产品开发工作，进行部门内和跨部门的沟通，确保产品按期上线； 4、根据市场需求和竞争态势，基于用户调研和数据分析，挖掘用户需求，对产品进行持续的优化，提升用户体验； 5、关注行业同类产品的用户体验，定期输出竞品分析或者国内外产品分析报告，制定相应的产品功能、活动方案及竞争策略。</rich-text> -->
+                <!-- <view style="margin-top:40rpx;">任职要求</view> -->
+                <rich-text>{{recruitment_list.contents}} </rich-text>
+            </view>
+        </view>
+        <view class="body_fooder">
+            <view>职位发布者</view>
+            <view class="body_food_flex">
+                <image src="{{recruitment_list.wxuser.headimgurl}}" class="body_food_img"></image>
+                <view>{{recruitment_list.wxuser.nickname}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom" style="padding-bottom: {{isIphoneX ? '40rpx' : '0rpx'}};height:{{isIphoneX ? '160rpx' : '120rpx'}}">
+        <view class="auth">
+            <image src="../../../assets/activety_detail/ic_share@3x.png" style="width:50rpx;height:50rpx;"></image>
+            <view style="font-size:24rpx;margin: 0rpx;">分享</view>
+            <van-button class="btn" type="info" open-type="share" hover-class="hover_btn" custom-style="height:56rpx;"></van-button>
+        </view>
+
+        <van-button type="info" round color="#4C5BFF" bindtap="resume">投递简历</van-button>
+    </view>
+   
+        <view class="resume" wx:if="{{resume}}" bindtap="resume_close">
+            <view class="resume_content">
+                <image src="../../../assets/recruit/pic_mail@3x.png" style="width:280rpx;height:264rpx;margin:66rpx 0 44rpx 0;"></image>
+                <text>请投递简历至此邮箱</text>
+                <view class="resume_email">{{recruitment_list.email}}</view>
+            </view>
+        </view>
+ 
+</scroll-view>

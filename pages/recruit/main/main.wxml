@@ -1,0 +1,28 @@
+    <view class="header_bottom">
+    <view class="header_txt">有招聘需求？</view>
+    <view class="header_btn" bindtap="create">快速发布</view>
+    <image src="../../../assets/recruit/pic_hire@3x.png" style="height:128rpx;width:198rpx"></image>
+</view>
+<view style="width:750rpx;height:128rpx;"></view>
+<view class="body auth" wx:for="{{recruitment_list}}" wx:key="{{item.id}}" hover-class="hover_class">
+    <view class="body_head">
+        <view>{{item.title}}</view>
+        <view style="color:#4C5BFF">{{item.compensation}}</view>
+    </view>
+    <view class="body_body">{{item.company}}</view>
+    <view class="body_fooder">
+        <text>{{item.city}} </text>|
+        <text>{{item.work_years}} </text>|
+        <text>{{item.education}}</text>
+    </view>
+     <van-button class="btn" type="info" open-type="getUserInfo" bind:getuserinfo="onAuth2" data-url="/pages/recruit/detail/detail?id={{item.id}}" hover-class="hover_btn"></van-button>
+</view>
+ <view style="color:#999999;font-size:28rpx; display: flex;justify-content: center;margin-bottom: 40rpx;" wx:if="{{msg_txt}}">{{msg_txt}}</view>
+
+<view class="container" i-class="item" wx:if="{{spinShow}}">
+    <i-spin fix custom>
+        <!-- <i-icon type="refresh" size="20" i-class="icon-load" />
+        <view>Loading</view> -->
+        <loading></loading>
+    </i-spin>
+</view>

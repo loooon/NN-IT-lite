@@ -1,0 +1,23 @@
+<view class="header">
+    <image src="{{write_off.QRcode}}" class="header_img"></image>
+    <view style="color:#F95656;font-weight:500;">核销码</view>
+    <view class="header_txt">{{write_off.check}}</view>
+</view>
+<view class="body">
+    <view style="display:flex;margin-bottom:20rpx;">
+        <view style="margin-right:20rpx">订单编号</view>
+        <text>{{write_off.order_sn}}</text>
+    </view>
+    <view style="display:flex">
+        <view style="margin-right:20rpx">付款时间</view>
+        <text>{{write_off.pay_time}}</text>
+    </view>
+    <view style="margin:20rpx 0 20rpx 124rpx;color:#4C5BFF;">待使用</view>
+</view>
+<view class="fooder">
+    <view>温馨提示：</view>
+    <view> 1.请不要把电子票随意分享给他人，以免被盗用。 </view>
+    <view>
+        2.入场时，请提前打开电子票，扫描二维码检票入场。
+    </view>
+</view>

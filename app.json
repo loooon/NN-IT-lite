@@ -1,0 +1,90 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/enter/enter",
+        "pages/active-detail/active-detail",
+        "pages/user/main/main",
+        "pages/sign-up/sign-up",
+        "pages/recruit/main/main",
+        "pages/recruit/detail/detail",
+        "pages/recruit/create/create",
+        "pages/recruit/modify/modify",
+        "pages/user/user-activity/user-activity",
+        "pages/user/user-payment/user-payment",
+        "pages/user/user-audit/user-audit",
+        "pages/user/user-recruit/user-recruit",
+        "pages/user/user-total-activity/user-total-activity",
+        "pages/user/user-confirm/user-confirm",
+        "components/static/loading"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "南宁IT圈",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "selectedColor": "#4C5BFF",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "发现",
+                "iconPath": "assets/icon/tab_home2@3x.png",
+                "selectedIconPath": "assets/icon/tab_home1@3x.png"
+            },
+            {
+                "pagePath": "pages/recruit/main/main",
+                "text": "招聘",
+                "iconPath": "assets/icon/tab_hire2@3x.png",
+                "selectedIconPath": "assets/icon/tab_hire1@3x.png"
+            },
+            {
+                "pagePath": "pages/user/main/main",
+                "text": "我的",
+                "iconPath": "assets/icon/tab_mine2@3x.png",
+                "selectedIconPath": "assets/icon/tab_mine1@3x.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "van-tag": "components/vant-weapp/dist/tag/index",
+        "van-collapse": "components/vant-weapp/dist/collapse/index",
+        "van-collapse-item": "components/vant-weapp/dist/collapse-item/index",
+        "van-panel": "components/vant-weapp/dist/panel/index",
+        "van-divider": "components/vant-weapp/dist/divider/index",
+        "van-search": "components/vant-weapp/dist/search/index",
+        "van-goods-action": "components/vant-weapp/dist/goods-action/index",
+        "van-goods-action-icon": "components/vant-weapp/dist/goods-action-icon/index",
+        "van-goods-action-button": "components/vant-weapp/dist/goods-action-button/index",
+        "van-row": "components/vant-weapp/dist/row/index",
+        "van-col": "components/vant-weapp/dist/col/index",
+        "van-submit-bar": "components/vant-weapp/dist/submit-bar/index",
+        "van-field": "components/vant-weapp/dist/field/index",
+        "van-grid": "components/vant-weapp/dist/grid/index",
+        "van-grid-item": "components/vant-weapp/dist/grid-item/index",
+        "van-cell": "components/vant-weapp/dist/cell/index",
+        "van-cell-group": "components/vant-weapp/dist/cell-group/index",
+        "van-tab": "components/vant-weapp/dist/tab/index",
+        "van-tabs": "components/vant-weapp/dist/tabs/index",
+        "van-popup": "components/vant-weapp/dist/popup/index",
+        "van-card": "components/vant-weapp/dist/card/index",
+        "van-button": "components/vant-weapp/dist/button/index",
+        "van-icon": "components/vant-weapp/dist/icon/index",
+        "van-dropdown-menu": "components/vant-weapp/dist/dropdown-menu/index",
+        "van-dropdown-item": "components/vant-weapp/dist/dropdown-item/index",
+        "van-uploader": "components/vant-weapp/dist/uploader/index",
+        "mp-searchbar": "components/static/searchbar/searchbar",
+        "loading":"components/static/loading/loading",
+        "van-dialog": "components/vant-weapp/dist/dialog/index",
+        "van-notice-bar": "components/vant-weapp/dist/notice-bar/index",
+        "van-steps": "components/vant-weapp/dist/steps/index",
+        "van-toast": "components/vant-weapp/dist/toast/index",
+        "van-loading": "components/vant-weapp/dist/loading/index",
+        "i-spin": "components/iview/dist/spin/index",
+        "i-icon": "components/iview/dist/icon/index",
+        "i-tabs": "components/iview/dist/tabs/index",
+        "i-tab": "components/iview/dist/tab/index"
+    }
+}

@@ -1,0 +1,61 @@
+<view wx:if="{{isconfirm_build}}">
+    <view class="boby">
+        <view class="body_flex">
+            <view>职位名称</view>
+            <input placeholder="请输入职位名称" placeholder-style="color:#999999;font-size:32rpx;" value="{{modify.title}}" bindblur="get_title"></input>
+        </view>
+        <view class="body_flex">
+            <view>公司名称</view>
+            <input placeholder="请输入公司名称" placeholder-style="color:#999999;font-size:32rpx;" value="{{modify.company}}" bindblur="get_company"></input>
+        </view>
+        <view class="section">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{salary}}">
+                <view class="body_flex">
+                    <view>薪资范围</view>
+                    <input value="{{salary[index]}}" placeholder="请输入职位名称" placeholder-style="color:#4C5BFF;font-size:32rpx;" bindblur="get_compensation" disabled></input>
+                </view>
+            </picker>
+        </view>
+        <view class="section">
+            <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                <view class="body_flex">
+                    <view>所在地区</view>
+                    <input value="{{region[0]}}{{region[1]}}{{region[2]}}" placeholder="请输入职位名称" placeholder-style="color:#4C5BFF;font-size:32rpx;" disabled style="width:450rpx;"></input>
+                </view>
+            </picker>
+        </view>
+         <view class="body_flex">
+            <view>详细地址</view>
+            <input placeholder="请输入职位名称" placeholder-style="color:#999999;font-size:32rpx;" value="{{modify.work_address}}"bindblur="get_work_address"style="width:450rpx;"></input>
+        </view>
+        <view class="section">
+            <picker bindchange="bindPickerEducation" range="{{education}}">
+                <view class="body_flex">
+                    <view>学历要求</view>
+                    <input value="{{education[ index_education]}}" placeholder="请选择学历要求" placeholder-style="color:#4C5BFF;font-size:32rpx;" disabled bindblur="get_education"></input>
+                </view>
+            </picker>
+        </view>
+        <view class="section">
+            <picker bindchange="bindPickerExperience" range="{{experience}}">
+                <view class="body_flex">
+                    <view>工作经验要求</view>
+                    <input value="{{experience[index_experience]}}" placeholder="请选择工作经验要求" placeholder-style="color:#4C5BFF;font-size:32rpx;" style="width:300rpx" disabled></input>
+                </view>
+            </picker>
+        </view>
+        <view class="body_flex">
+            <view>简历投递邮箱</view>
+            <input placeholder="请输入简历投递邮箱" placeholder-style="color:#999999;font-size:32rpx;" style="width:300rpx;"  value="{{modify.email}}" bindblur="get_mailbox" style="width:400rpx;"></input>
+        </view>
+        <view style="margin:36rpx 0;">职责描述</view>
+        <textarea placeholder="请简要描述您发布的职位职责" placeholder-style="color:#999999;font-size:32rpx;" bindblur="get_contents" maxlength="1500" style="height:150rpx;" value="{{modify.contents}}"></textarea>
+    </view>
+    <!-- <van-button type="info" round color="#4C5BFF" bindtap="resume" class="bottom_btn">立即发布</van-button> -->
+    <van-button type="info" round color="#4C5BFF" bindtap="confirm_build" custom-style="margin:40rpx;">立即发布</van-button></view>
+  <view class="sign_up" wx:else>
+    <image src="../../../assets/recruit/pic_succeed@3x.png" class="sign_up_img"></image>
+    <view>提交成功</view>
+    <view style="margin:26rpx 0 40rpx 0;">管理员审核通过后将在平台展示</view>
+    <van-button round type="info" bindtap="return_index"  color="#EEEFF1" custom-style="color:#4c5bff;">返回首页</van-button>
+</view>

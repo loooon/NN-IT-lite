@@ -1,0 +1,29 @@
+<scroll-view>
+    <view class="header_off" wx:if="{{kong}}">
+        <image src="../../../assets/null.png" style="width:160rpx;height:160rpx;"></image>
+        <text style="margin:30rpx 0;">还没有待支付订单，赶紧去报名吧</text>
+        <van-button color="#EEEFF1" custom-style="color:#4c5bff;" round bindtap="return_index">去首页</van-button>
+    </view>
+    <view wx:for="{{user_payment}}" wx:key="{{item.id}}" style="margin-bottom:20rpx" >
+
+        <view class="component" bindtap="onclick_detail" data-id="{{item.activities.id}}">
+            <view>
+                <view class="component_title">{{item.activities.title}}</view>
+                <view class="component_flex">
+                    <image src="../../../assets/index/ic_time@3x.png"></image>
+                    <view class="time">{{item.activities.start_date}} {{item.activities.start_week}} {{item.activities.start_times}}-{{item.activities.start_times}}</view>
+                </view>
+                <view class="component_flex" style="margin-top: 16rpx;margin-bottom:38rpx;">
+                    <image src="../../../assets/index/ic_location@3x.png" style="width:28rpx;height:34rpx;margin-top: 18rpx"></image>
+                    <view class="local">{{item.activities.address}}</view>
+                </view>
+            </view>
+            <view class="underline"></view>
+            <view class="component_fooder">
+                <view style="color:#F95656;font-size:32rpx;">待支付</view>
+                <van-button type="info" round color="#4C5BFF" catchtap="topay" custom-style="font-size:28rpx;height:72rpx;" data-status="6" data-order="{{item.order_sn}}">立即支付</van-button>
+            </view>
+        </view>
+    </view>
+
+</scroll-view>

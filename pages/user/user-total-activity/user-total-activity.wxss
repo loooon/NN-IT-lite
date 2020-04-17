@@ -1,0 +1,55 @@
+/* pages/user/user-payment/user-payment.wxss */
+
+page {
+    font-size: 28rpx;
+    background: #f0f0f0;
+}
+.component {
+    margin: 30rpx 40rpx 0 40rpx;
+    box-sizing: border-box;
+    padding: 30rpx 30rpx 0rpx 30rpx;
+    width: 670rpx;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 20rpx;
+}
+
+.component_title {
+    font-weight: 600;
+    font-size: 42rpx;
+    margin-bottom: 20rpx;
+}
+
+.component_flex {
+    display: flex;
+    align-items: center;
+    color: #777;
+}
+
+.component_flex image {
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 14rpx;
+}
+
+.underline {
+    height: 4rpx;
+    background: #f1f2f4;
+   
+}
+
+.component_fooder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 116rpx;
+}
+.component button:not([size='mini']) {
+    min-height: 72rpx;
+    width: 180rpx;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn_class{
+    width:168rpx !important;
+    height:72rpx !important;
+}

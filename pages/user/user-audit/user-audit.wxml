@@ -1,0 +1,45 @@
+<view class="header_off" wx:if="{{kong}}">
+    <image src="../../../assets/null.png" style="width:160rpx;height:160rpx;"></image>
+    <text style="margin:30rpx 0;">还没有待审核订单，赶紧去报名吧</text>
+    <van-button color="#EEEFF1" custom-style="color:#4c5bff;" round bindtap="return_index">去首页</van-button>
+</view>
+<view></view>
+<view class="component" wx:for="{{user_audit}}" wx:key="item.id" bindtap="onclick_detail" data-id="{{item.activities.id}}">
+    <view>
+        <view class="component_title">{{item.activities.title}}</view>
+        <view class="component_flex">
+            <image src="../../../assets/index/ic_time@3x.png"></image>
+            <view class="time">{{item.activities.start_date}} {{item.activities.start_week}} {{item.activities.start_times}}-{{item.activities.start_times}}</view>
+        </view>
+        <view class="component_flex" style="margin-top: 18rpx;margin-bottom:38rpx;">
+            <image src="../../../assets/index/ic_location@3x.png" style="width:28rpx;height:34rpx;margin-right:16rpx;"></image>
+            <view class="local">{{item.activities.address}}</view>
+        </view>
+    </view>
+    <view class="underline"></view>
+    <view class="component_fooder">
+        <view style="color:#666666;font-size:32rpx;">待审核</view>
+
+    </view>
+</view>
+<view class="component" wx:for="{{recruitment_off}}" wx:key="{{item.id}}">
+    <view>
+        <view class="body_head">
+            <view>{{item.title}}</view>
+            <view style="color:#4C5BFF">{{item.compensation}}</view>
+        </view>
+        <view class="body_body">{{item.company}}</view>
+        <view class="body_fooder">
+            <text>{{item.city}} </text>|
+            <text>{{item.work_years}} </text>|
+            <text>{{item.education}}</text>
+        </view>
+    </view>
+    <view class="underline"></view>
+    <view class="component_fooder">
+        <view style="color:#666666;font-size:32rpx;">审核中</view>
+        <view>
+            <van-button plain round color="#F95656" catchtap="del_recruit" data-id="{{item.id}}"  custom-class="btn_class">删除</van-button>
+        </view>
+    </view>
+</view>

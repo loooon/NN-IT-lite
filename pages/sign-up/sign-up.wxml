@@ -1,0 +1,48 @@
+<!-- <scroll-view scroll-y class="container">
+
+
+    <view wx:if="{{!isbaoming}}">
+        <view class="bao_input">
+            <view style="margin-bottom:12rpx;">姓名</view>
+            <input class="weui-input" bindblur="get_name" placeholder="必填" />
+        </view>
+        <view class="bao_input">
+            <view style="margin-bottom:12rpx;">联系电话</view>
+            <input class="weui-input" bindblur="get_num" placeholder="必填" />
+        </view>
+        <view class="bao_define">
+            <van-button round type="info" bindtap="bao_define" custom-class="van_but">提交</van-button>
+        </view>
+    </view>
+  
+    <view class="col" wx:else>
+        <van-icon name="checked" color="#B5B5B5" size="236rpx" />
+        <view class="bao_text">报名提交成功，请等待管理员审核，审核通过后将发短信至您的手机上</view>
+        <van-button round type="info" bindtap="return_index" custom-class="van_but">返回首页</van-button>
+       
+    </view>
+</scroll-view> -->
+<view wx:if="{{!isbaoming}}" style="margin:40rpx;">
+    <view class="title">NNITQ Meetup #9</view>
+    <view class="boby">
+        <view class="body_flex">
+            <view>姓名</view>
+            <input placeholder="请输入您的姓名" placeholder-style="color:##999999;font-size:32rpx;" bindblur="get_name"></input>
+        </view>
+        <view class="body_flex">
+            <view>手机号码</view>
+            <input placeholder="请输入手机号码" placeholder-style="color:##999999;font-size:32rpx;" bindblur="get_num"></input>
+        </view>
+
+        <view style="margin:36rpx 0;">报名说明</view>
+        <textarea placeholder="请简要描述您的公司、职位等信息" placeholder-style="color:##999999;font-size:32rpx;" bindblur="get_explain" maxlength="150" style="height:150rpx;"></textarea>
+    </view>
+    <van-button type="info" round color="#4C5BFF" bindtap="bao_define" >立即报名</van-button>
+</view>
+
+<view class="sign_up" wx:else>
+    <image src="../../assets/recruit/pic_succeed@3x.png" class="sign_up_img"></image>
+    <view>报名成功</view>
+    <view style="margin:26rpx 0 40rpx 0;">您可在“我的”实时查看报名审核情况</view>
+    <van-button round type="info" bindtap="return_index"  color="#EEEFF1" custom-style="color:#4c5bff;">返回首页</van-button>
+</view>

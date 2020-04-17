@@ -1,0 +1,12 @@
+/* pages/user/user-message/user-message.wxss */
+.container {
+  padding: 0rpx 0rpx 30rpx 0;
+}
+/* 去panel的边框*/
+.van-hairline--bottom:after, .van-hairline--left:after, .van-hairline--right:after, .van-hairline--surround:after, .van-hairline--top-bottom:after, .van-hairline--top:after, .van-hairline:after{
+  border:none !important;
+}
+page {
+    font-size: 28rpx;
+    background: #f0f0f0;
+}

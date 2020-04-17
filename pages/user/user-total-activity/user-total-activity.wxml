@@ -1,0 +1,123 @@
+<van-tabs active="{{ active }}" bind:change="onChange" color="#4C5BFF" sticky animated swipeable>
+    <van-tab title="全部">
+        <view class="component" wx:for="{{user_payment}}" wx:key="{{item.id}}" bindtap="onclick_detail" data-id="{{item.activities.id}}">
+            <view>
+                <view class="component_title">{{item.activities.title}}</view>
+                <view class="component_flex">
+                    <image src="../../../assets/index/ic_time@3x.png"></image>
+                    <view class="time">{{item.activities.start_date}} {{item.activities.start_week}} {{item.activities.start_times}}-{{item.activities.start_times}}</view>
+                </view>
+                <view class="component_flex" style="margin-top: 16rpx;margin-bottom:38rpx;">
+                    <image src="../../../assets/index/ic_location@3x.png" style="width:28rpx;height:34rpx;margin-right:18rpx;"></image>
+                    <view class="local">{{item.activities.address}}</view>
+                </view>
+            </view>
+            <view class="underline"></view>
+            <view class="component_fooder">
+                <view style="color:#F95656;font-size:32rpx;">待支付</view>
+                <van-button type="info" round color="#4C5BFF" catchtap="topay" custom-style="font-size:28rpx;height:72rpx;" data-status="6" data-order="{{item.order_sn}}">立即支付</van-button>
+            </view>
+        </view>
+        <view class="component" wx:for="{{ready_active}}" wx:key="{{item.id}}" bindtap="onclick_detail" data-id="{{item.activities.id}}">
+            <view>
+                <view class="component_title">{{item.activities.title}}</view>
+                <view class="component_flex">
+                    <image src="../../../assets/index/ic_time@3x.png"></image>
+                    <view class="time">{{item.activities.start_date}} {{item.activities.start_week}} {{item.activities.start_times}}-{{item.activities.start_times}}</view>
+                </view>
+                <view class="component_flex" style="margin-top: 16rpx;margin-bottom:38rpx;">
+                    <image src="../../../assets/index/ic_location@3x.png" style="width:28rpx;height:34rpx;margin-right:18rpx;"></image>
+                    <view class="local">{{item.activities.address}}</view>
+                </view>
+            </view>
+            <view class="underline"></view>
+            <view class="component_fooder">
+                <view style="color:#4C5BFF;font-size:32rpx;">待参加</view>
+               
+                    <van-button plain round color="#4C5BFF" catchtap="user_confirm" data-id="{{item.id}}" custom-class="btn_class">核销码</van-button>
+               
+            </view>
+        </view>
+        <view class="component" wx:for="{{user_audit}}" wx:key="item.id" bindtap="onclick_detail" data-id="{{item.activities.id}}">
+            <view>
+                <view class="component_title">{{item.activities.title}}</view>
+                <view class="component_flex">
+                    <image src="../../../assets/index/ic_time@3x.png"></image>
+                    <view class="time">{{item.activities.start_date}} {{item.activities.start_week}} {{item.activities.start_times}}-{{item.activities.start_times}}</view>
+                </view>
+                <view class="component_flex" style="margin-top: 16rpx;margin-bottom:38rpx;">
+                    <image src="../../../assets/index/ic_location@3x.png" style="width:28rpx;height:34rpx;margin-right:18rpx;"></image>
+                    <view class="local">{{item.activities.address}}</view>
+                </view>
+            </view>
+            <view class="underline"></view>
+            <view class="component_fooder">
+                <view style="color:#666666;font-size:32rpx;">待审核</view>
+
+            </view>
+        </view>
+    </van-tab>
+    <van-tab title="待支付">
+        <view class="component" wx:for="{{user_payment}}" wx:key="{{item.id}}" bindtap="onclick_detail" data-id="{{item.activities.id}}">
+            <view>
+                <view class="component_title">{{item.activities.title}}</view>
+                <view class="component_flex">
+                    <image src="../../../assets/index/ic_time@3x.png"></image>
+                    <view class="time">{{item.activities.start_date}} {{item.activities.start_week}} {{item.activities.start_times}}-{{item.activities.start_times}}</view>
+                </view>
+                <view class="component_flex" style="margin-top: 16rpx;margin-bottom:38rpx;">
+                    <image src="../../../assets/index/ic_location@3x.png" style="width:28rpx;height:34rpx;margin-right:18rpx;"></image>
+                    <view class="local">{{item.activities.address}}</view>
+                </view>
+            </view>
+            <view class="underline"></view>
+            <view class="component_fooder">
+                <view style="color:#F95656;font-size:32rpx;">待支付</view>
+                <van-button type="info" round color="#4C5BFF" catchtap="topay" custom-style="font-size:28rpx;height:72rpx;" data-status="6" data-order="{{item.order_sn}}">立即支付</van-button>
+            </view>
+        </view>
+    </van-tab>
+    <van-tab title="待参加">
+        <view class="component" wx:for="{{ready_active}}" wx:key="{{item.id}}" bindtap="onclick_detail" data-id="{{item.activities.id}}">
+            <view>
+                <view class="component_title">{{item.activities.title}}</view>
+                <view class="component_flex">
+                    <image src="../../../assets/index/ic_time@3x.png"></image>
+                    <view class="time">{{item.activities.start_date}} {{item.activities.start_week}} {{item.activities.start_times}}-{{item.activities.start_times}}</view>
+                </view>
+                <view class="component_flex" style="margin-top: 16rpx;margin-bottom:38rpx;">
+                    <image src="../../../assets/index/ic_location@3x.png" style="width:28rpx;height:34rpx;margin-right:18rpx;"></image>
+                    <view class="local">{{item.activities.address}}</view>
+                </view>
+            </view>
+            <view class="underline"></view>
+            <view class="component_fooder">
+                <view style="color:#4C5BFF;font-size:32rpx;">待参加</view>
+                <navigator url='../user-confirm/user-confirm?id={{item.id}}'>
+                    <van-button plain round color="#4C5BFF" custom-class="btn_class">核销码</van-button>
+                </navigator>
+            </view>
+        </view>
+    </van-tab>
+    <van-tab title="待审核">
+        <view class="component" wx:for="{{user_audit}}" wx:key="item.id" bindtap="onclick_detail" data-id="{{item.activities.id}}">
+            <view>
+                <view class="component_title">{{item.activities.title}}</view>
+                <view class="component_flex">
+                    <image src="../../../assets/index/ic_time@3x.png"></image>
+                    <view class="time">{{item.activities.start_date}} {{item.activities.start_week}} {{item.activities.start_times}}-{{item.activities.start_times}}</view>
+                </view>
+                <view class="component_flex" style="margin-top: 16rpx;margin-bottom:38rpx;">
+                    <image src="../../../assets/index/ic_location@3x.png" style="width:28rpx;height:34rpx;margin-right:18rpx;"></image>
+                    <view class="local">{{item.activities.address}}</view>
+                </view>
+            </view>
+            <view class="underline"></view>
+            <view class="component_fooder">
+                <view style="color:#666666;font-size:32rpx;">待审核</view>
+
+            </view>
+        </view>
+    </van-tab>
+</van-tabs>
+

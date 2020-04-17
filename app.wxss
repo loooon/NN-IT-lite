@@ -1,0 +1,39 @@
+.container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+/* button隐藏样式 start*/
+
+.auth {
+    position: relative;
+    margin-bottom: 15rpx;
+}
+
+.auth > .btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    opacity: 0;
+}
+
+.auth > .btn button {
+    height: 100%;
+    width: 100%;
+}
+
+/* button隐藏样式 end */
+
+/* page {
+    font-size: 28rpx;
+    background: #f0f0f0;
+} */

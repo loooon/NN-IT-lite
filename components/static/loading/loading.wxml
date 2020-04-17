@@ -1,0 +1,10 @@
+<view class="{{ fullHeight ? 'loading-overlap' : '' }}">
+    <view class="loading {{ fullHeight ? 'loading_full-height' : '' }}">
+        <view class="loading__error" wx:if="{{ error }}" bindtap='onError' hover-class="navigator-hover">出错了，点我重试</view>
+        <view wx:elif='{{ msg }}' class="loading__msg">{{ msg }}</view>
+        <!-- <van-loading wx:else /> -->
+        <view wx:else>
+            <view class="loading__icon"></view>加载中
+        </view>
+    </view>
+</view>
